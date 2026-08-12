@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zabuton — small, focused desktop apps</title>
+<meta name="description" content="座布団 (zabuton) is a series of small, focused desktop apps for Linux, Windows, and macOS. Local-first, no cloud, no accounts — free and open source.">
+<meta property="og:title" content="zabuton — small, focused desktop apps">
+<meta property="og:description" content="座布団 (zabuton) is a series of small, focused desktop apps for Linux, Windows, and macOS. Local-first, no cloud, no accounts — free and open source.">
+<meta property="og:image" content="https://zabuton-app.github.io/assets/zabuton.png">
+<meta property="og:url" content="https://zabuton-app.github.io/">
+<meta property="og:type" content="website">
+<link rel="icon" href="./assets/zabuton.png">
+<style>
+  /* zabuton brand palette: beige paper, navy cushion, gold enso */
+  :root {
+    color-scheme: light;
+    --bg: #f4edda;
+    --fg: #1c2b3a;
+    --muted: #8a8371;
+    --card: #fbf6e8;
+    --border: #ddd4bb;
+    --accent: #b8863b;
+    --accent-fg: #fbf6e8;
+    --navy: #1c2b3a;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--fg);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  header { text-align: center; margin-bottom: 3rem; }
+  header img.brand {
+    width: 180px; height: 180px; border-radius: 24px;
+    border: 1px solid var(--border);
+  }
+  h1 { font-size: 2.4rem; margin-top: 1rem; letter-spacing: .02em; }
+  h1 .kanji { color: var(--accent); }
+  .tagline { color: var(--muted); font-size: 1.1rem; max-width: 42rem; margin: .75rem auto 0; }
+  h2 { font-size: 1.3rem; margin: 2.5rem 0 1rem; }
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+  .app {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.5rem;
+    display: flex; flex-direction: column;
+  }
+  .app .head { display: flex; align-items: center; gap: .9rem; margin-bottom: .75rem; }
+  .app .head img { width: 56px; height: 56px; border-radius: 22%; }
+  .app .head .names { line-height: 1.25; }
+  .app .head .kanji { font-size: 1.5rem; font-weight: 700; }
+  .app .head .romaji { color: var(--muted); font-size: .95rem; }
+  .app .desc { flex: 1; font-size: .95rem; margin-bottom: 1rem; }
+  .app .version { color: var(--muted); font-size: .85rem; margin-bottom: .75rem; }
+  .btn {
+    display: block; text-align: center; text-decoration: none;
+    background: var(--accent); color: var(--accent-fg);
+    border-radius: 8px; padding: .55rem .9rem; margin: .4rem 0;
+    font-weight: 600; font-size: .95rem;
+  }
+  .btn.secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); font-weight: 500; }
+  .btn:hover { filter: brightness(1.08); }
+  .note { color: var(--muted); font-size: .9rem; margin-top: 1.5rem; }
+  footer { margin-top: 3.5rem; text-align: center; color: var(--muted); font-size: .9rem; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="brand" src="./assets/zabuton.png" alt="zabuton brand mark: a navy floor cushion under a gold enso circle">
+    <h1><span class="kanji">座布団</span> zabuton</h1>
+    <p class="tagline">A series of small, focused desktop apps for Linux, Windows, and macOS.
+    Local-first, no cloud, no accounts — free and open source.</p>
+  </header>
+
+  <h2>Apps</h2>
+  <div class="apps">
+    <div class="app">
+      <div class="head">
+        <img src="./assets/meguri.png" alt="Meguri app icon">
+        <div class="names">
+          <div class="kanji">巡</div>
+          <div class="romaji">meguri</div>
+        </div>
+      </div>
+      <p class="desc">🎬 A local-first media library for your videos &amp; photos —
+      scan, browse, search, and play. No cloud, no account.</p>
+      <p class="version" data-repo="meguri"></p>
+      <a class="btn" href="https://zabuton-app.github.io/meguri/">Website &amp; downloads</a>
+      <a class="btn secondary" href="https://github.com/zabuton-app/meguri">Source code on GitHub</a>
+    </div>
+    <div class="app">
+      <div class="head">
+        <img src="./assets/kizami.png" alt="Kizami app icon">
+        <div class="names">
+          <div class="kanji">刻</div>
+          <div class="romaji">kizami</div>
+        </div>
+      </div>
+      <p class="desc">⏱️ A tray-resident pomodoro timer with a candy-pop look —
+      focus, breaks, and desktop notifications, always one click away.</p>
+      <p class="version" data-repo="kizami"></p>
+      <a class="btn" href="https://zabuton-app.github.io/kizami/">Website &amp; downloads</a>
+      <a class="btn secondary" href="https://github.com/zabuton-app/kizami">Source code on GitHub</a>
+    </div>
+  </div>
+
+  <p class="note">Every zabuton app is named after a Japanese verb and displayed as a single kanji.
+  More apps are on the way — they will appear here as they are released.</p>
+
+  <footer>
+    <p>Free &amp; open source ·
+    <a href="https://github.com/zabuton-app">zabuton-app on GitHub</a></p>
+  </footer>
+</div>
+
+<script>
+  // Show the latest release tag for each app; silently skip on API errors.
+  for (const el of document.querySelectorAll("[data-repo]")) {
+    fetch(`https://api.github.com/repos/zabuton-app/${el.dataset.repo}/releases/latest`)
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((rel) => { el.textContent = `Latest release: ${rel.tag_name}`; })
+      .catch(() => {});
+  }
+</script>
+</body>
+</html>
