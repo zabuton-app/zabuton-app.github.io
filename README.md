@@ -10,8 +10,11 @@ site (`/meguri/`, `/kizami/`, …), GitHub repository, and latest release.
 
 - `index.html` — the whole page: markup, styles, and a small script that
   fetches each app's latest release tag from the GitHub API
-- `assets/` — the zabuton brand image and app icons (copied from each
-  app's `docs/assets/icon.png`)
+- `assets/` — the zabuton brand image, app icons (copied from each
+  app's `docs/assets/icon.png`), and the mascot (`mascot-idle.gif` and
+  `mascot-idle.png`, copied from `pixel/gif/idle.gif` and
+  `pixel/png/idle-1.png` in the
+  [mascot](https://github.com/zabuton-app/mascot) repository)
 
 ## Development
 

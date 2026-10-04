@@ -62,6 +62,10 @@
   .btn.secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); font-weight: 500; }
   .btn:hover { filter: brightness(1.08); }
   .note { color: var(--muted); font-size: .9rem; margin-top: 1.5rem; }
+  .mascot { text-align: center; }
+  .mascot img { image-rendering: pixelated; }
+  .mascot p { font-size: .95rem; max-width: 36rem; margin: .5rem auto 0; }
+  .mascot a { color: inherit; }
   footer { margin-top: 3.5rem; text-align: center; color: var(--muted); font-size: .9rem; }
   footer a { color: inherit; }
 </style>
@@ -109,6 +113,17 @@
 
   <p class="note">Every zabuton app is named after a Japanese verb and displayed as a single kanji.
   More apps are on the way — they will appear here as they are released.</p>
+
+  <h2>Mascot</h2>
+  <div class="mascot">
+    <picture>
+      <source media="(prefers-reduced-motion: reduce)" srcset="./assets/mascot-idle.png">
+      <img src="./assets/mascot-idle.gif" width="240" height="200" alt="The pixel-art zabuton mascot idling">
+    </picture>
+    <p>Meet the zabuton mascot: a navy floor cushion whose four corner tassels serve
+    as arms and legs, here to keep the zabuton apps company. The artwork lives in the
+    <a href="https://github.com/zabuton-app/mascot">mascot repository</a>.</p>
+  </div>
 
   <footer>
     <p>Free &amp; open source ·
